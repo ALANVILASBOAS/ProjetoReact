@@ -1,32 +1,52 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import {Typography,Box,Button, Tabs, Tab, SvgIcon } from '@material-ui/core';
-import LogoutIcon from '@material-ui/icons';
-import { Grid } from '@mui/material';
-
-
-class Nav extends React.Component {
-  render() {
-    return (
-      <>
-      <AppBar title="My App" position="static" color="default">
-      <Tabs>
-        <Tab label="Blog Pessoal" />
+import { AppBar, Toolbar, Typography, Box, Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import './Navbar.css'
+function Navbar() {
+  return (
+    <Grid container className='nav'>
       
-        <Tab label="home" />
-        <Tab label="postagens" />
-        <Tab label="temas"/>
-        <Tab label="cadastrar temas" />
-        <Tab label="logout" />
-      </Tabs>
-    </AppBar>
-</>
-)
-}
+        <AppBar position="static">
+          <Toolbar variant="dense">
+            <Box style={{ cursor: "pointer" }} >
+              <Typography variant="h5" color="inherit">
+                BlogPessoal
+              </Typography>
+            </Box>
+            <Box display="flex" justifyContent="start">
+              <Box mx={1} style={{ cursor: "pointer" }}>
+                <Typography variant="h6" color="inherit">
+                  home
+                </Typography>
+              </Box>
+              <Box mx={1} style={{ cursor: "pointer" }}>
+                <Typography variant="h6" color="inherit">
+                  postagens
+                </Typography>
+              </Box>
+              <Box mx={1} style={{ cursor: "pointer" }}>
+                <Typography variant="h6" color="inherit">
+                  temas
+                </Typography>
+              </Box>
+              <Box mx={1} style={{ cursor: "pointer" }}>
+                <Typography variant="h6" color="inherit">
+                  cadastrar tema
+                </Typography>
+              </Box>
+              <Link to='/login' className='text-decorator-none'>
+                <Box mx={1} style={{ cursor: "pointer", color: "white" }}>
+                  <Typography variant="h6" color="inherit">
+                    logout
+                  </Typography>
+                </Box>
+              </Link>
+            </Box>
+          </Toolbar>
+        </AppBar>
+    
+    </Grid>
+  )
 }
 
-
-export default Nav;
+export default Navbar;

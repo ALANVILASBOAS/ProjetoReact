@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Box, Grid, Button} from '@material-ui/core';
+import { Typography, Box, Grid, Button } from '@material-ui/core';
 import './Home.css';
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#11051C" }}>
                 <Grid alignItems="flex-start" item xs={6}>
                     <Box paddingX={3} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#FF003A", fontWeight: "bold" }}>Seja bem vinde!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#FF003A", fontWeight: "bold" }}>Seja bem vindo!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>expresse aqui os seus pensamentos e opiniões!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
