@@ -1,20 +1,29 @@
-import * as React from 'react';
-import Appbar from '@material-ui/core/Button';
-import { AppBar, Tabs, Tab } from '@material-ui/core';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import {Typography,Box,Button, Tabs, Tab } from '@material-ui/core';
+
+
 
 class Nav extends React.Component {
-    render() {
-      return (
-        <AppBar title="My App">
-          <Tabs>
-            <Tab label="Item 1" />
-            <Tab label="Item 2" />
-            <Tab label="Item 3" />
-            <Tab label="Item 4" />
-          </Tabs>
-        </AppBar>
-      )
-    }
-  }
+  render() {
+    return (
+      <AppBar title="My App" position="static" color="default">
+      <Tabs>
+        <Tab label="Blog Pessoal" />
+        <Tab label="home" />
+        <Tab label="postagens" />
+        <Tab label="temas"/>
+        <Tab label="cadastrar temas" />
+        <Tab label="logout" />
+      </Tabs>
+    </AppBar>
+
+)
+}
+}
+
 
 export default Nav;
