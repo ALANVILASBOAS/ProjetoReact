@@ -1,58 +1,51 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Grid } from '@material-ui/core';
-import Nav from './components/estaticos/navbar/Navbar';
-import Footer from './components/estaticos/footer/Footer';
-import Home from './paginas/home/Home';
-import Login from './paginas/login/Login';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/estaticos/navbar/Navbar";
+import Footer from "./components/estaticos/footer/Footer";
+import "./App.css";
+import Home from "./paginas/Home/Home";
+import Login from "./paginas/login/Login";
+import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
+import ListaTema from "./components/temas/listatema/ListaTema";
+import ListaPostagem from "./components/postagens/listapostagem/ListaPostagem";
 
 function App() {
   return (
     <Router>
-      <Nav />
+      <Navbar />
+
       <Switch>
-        <div style={{ minHeight: '100vh' }}>
-        <Route exact path='/'>
+        <div style={{minHeight: '100vh'}}>
+        <Route exact path="/">
             <Login />
           </Route>
-          <Route path='/Login'>
+          
+          <Route path="/login">
             <Login />
           </Route>
 
-          <Route path='/home'>
+          <Route path="/home">
             <Home />
           </Route>
+
+          <Route path="/cadastrousuario">
+            <CadastroUsuario />
+          </Route>
+
+          <Route path="/temas">
+            <ListaTema />
+          </Route>
+
+          <Route path="/posts">
+            <ListaPostagem />
+          </Route>
+
         </div>
       </Switch>
+
       <Footer />
     </Router>
-  )
+  );
 }
-export default App;
 
-/* <Grid container spacing={2}>
-        <Grid item xs={12} sm={12}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <Home />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <Home />
-        </Grid>
- </Grid> */
-    // <Home/>
+export default App;

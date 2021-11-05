@@ -1,8 +1,4 @@
-.textos1{
-    font-weight: bold !important;
-}
-
-.imagem{
+.imagem2{
     background-image: url(https://i.imgur.com/o25IBnd.jpg);
     background-repeat: no-repeat;
     width: 100vh;
@@ -11,11 +7,14 @@
     background-position: center;    
 }
 
-.text-decorator-none{
-    text-decoration: none;
+.textos2{
+    font-weight: bold !important;
 }
 
-.cor-botao{
-    background-color: #8C5845 !important;
+.btnCancelar{
+    margin-right: 20px !important;
+}
 
+.text-decorator-none{
+    text-decoration: none;
 }
