@@ -1,4 +1,4 @@
-import Tema from "./Tema";
+import Tema from './Tema'
 
 interface Postagem{
     id: number;

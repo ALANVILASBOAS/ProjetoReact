@@ -1,15 +1,15 @@
 .caixa{
-    background-color: #8C5845;
+    background-color: #3F51B5;
 }
 
 .titulo{
-    color: white !important;
-    font-weight: bold !important;
+   color: white !important;
+   font-weight: bold !important;
 }
 
 .botao{
     border-color: white !important;
-    background-color: #593325;
+    background-color: #3F51B5;
     color: white !important;
 }
 
